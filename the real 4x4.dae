@@ -5,8 +5,8 @@
       <author>Blender User</author>
       <authoring_tool>Blender 2.90.0 commit date:2020-08-31, commit time:11:26, hash:0330d1af29c0</authoring_tool>
     </contributor>
-    <created>2021-04-11T16:39:49</created>
-    <modified>2021-04-11T16:39:49</modified>
+    <created>2021-04-13T17:25:27</created>
+    <modified>2021-04-13T17:25:27</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -158,23 +158,6 @@
         </technique>
       </profile_COMMON>
     </effect>
-    <effect id="GOAL_002-effect">
-      <profile_COMMON>
-        <technique sid="common">
-          <lambert>
-            <emission>
-              <color sid="emission">0 0 0 1</color>
-            </emission>
-            <diffuse>
-              <color sid="diffuse">1 0.02598805 0.1434629 1</color>
-            </diffuse>
-            <index_of_refraction>
-              <float sid="ior">1.45</float>
-            </index_of_refraction>
-          </lambert>
-        </technique>
-      </profile_COMMON>
-    </effect>
   </library_effects>
   <library_images/>
   <library_materials>
@@ -192,9 +175,6 @@
     </material>
     <material id="Material_002-material" name="Material.002">
       <instance_effect url="#Material_002-effect"/>
-    </material>
-    <material id="GOAL_002-material" name="GOAL.002">
-      <instance_effect url="#GOAL_002-effect"/>
     </material>
   </library_materials>
   <library_geometries>
@@ -236,48 +216,6 @@
           <input semantic="VERTEX" source="#Plane_002-mesh-vertices" offset="0"/>
           <input semantic="NORMAL" source="#Plane_002-mesh-normals" offset="1"/>
           <input semantic="TEXCOORD" source="#Plane_002-mesh-map-0" offset="2" set="0"/>
-          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
-        </triangles>
-      </mesh>
-    </geometry>
-    <geometry id="Plane_001-mesh" name="Plane.001">
-      <mesh>
-        <source id="Plane_001-mesh-positions">
-          <float_array id="Plane_001-mesh-positions-array" count="12">-1 -1 0 1 -1 0 -1 1 0 1 1 0</float_array>
-          <technique_common>
-            <accessor source="#Plane_001-mesh-positions-array" count="4" stride="3">
-              <param name="X" type="float"/>
-              <param name="Y" type="float"/>
-              <param name="Z" type="float"/>
-            </accessor>
-          </technique_common>
-        </source>
-        <source id="Plane_001-mesh-normals">
-          <float_array id="Plane_001-mesh-normals-array" count="3">0 0 1</float_array>
-          <technique_common>
-            <accessor source="#Plane_001-mesh-normals-array" count="1" stride="3">
-              <param name="X" type="float"/>
-              <param name="Y" type="float"/>
-              <param name="Z" type="float"/>
-            </accessor>
-          </technique_common>
-        </source>
-        <source id="Plane_001-mesh-map-0">
-          <float_array id="Plane_001-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
-          <technique_common>
-            <accessor source="#Plane_001-mesh-map-0-array" count="6" stride="2">
-              <param name="S" type="float"/>
-              <param name="T" type="float"/>
-            </accessor>
-          </technique_common>
-        </source>
-        <vertices id="Plane_001-mesh-vertices">
-          <input semantic="POSITION" source="#Plane_001-mesh-positions"/>
-        </vertices>
-        <triangles material="goal-material" count="2">
-          <input semantic="VERTEX" source="#Plane_001-mesh-vertices" offset="0"/>
-          <input semantic="NORMAL" source="#Plane_001-mesh-normals" offset="1"/>
-          <input semantic="TEXCOORD" source="#Plane_001-mesh-map-0" offset="2" set="0"/>
           <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
         </triangles>
       </mesh>
@@ -342,53 +280,11 @@
         </triangles>
       </mesh>
     </geometry>
-    <geometry id="Plane-mesh" name="Plane">
-      <mesh>
-        <source id="Plane-mesh-positions">
-          <float_array id="Plane-mesh-positions-array" count="12">-1 -1 0 1 -1 0 -1 1 0 1 1 0</float_array>
-          <technique_common>
-            <accessor source="#Plane-mesh-positions-array" count="4" stride="3">
-              <param name="X" type="float"/>
-              <param name="Y" type="float"/>
-              <param name="Z" type="float"/>
-            </accessor>
-          </technique_common>
-        </source>
-        <source id="Plane-mesh-normals">
-          <float_array id="Plane-mesh-normals-array" count="3">0 0 1</float_array>
-          <technique_common>
-            <accessor source="#Plane-mesh-normals-array" count="1" stride="3">
-              <param name="X" type="float"/>
-              <param name="Y" type="float"/>
-              <param name="Z" type="float"/>
-            </accessor>
-          </technique_common>
-        </source>
-        <source id="Plane-mesh-map-0">
-          <float_array id="Plane-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
-          <technique_common>
-            <accessor source="#Plane-mesh-map-0-array" count="6" stride="2">
-              <param name="S" type="float"/>
-              <param name="T" type="float"/>
-            </accessor>
-          </technique_common>
-        </source>
-        <vertices id="Plane-mesh-vertices">
-          <input semantic="POSITION" source="#Plane-mesh-positions"/>
-        </vertices>
-        <triangles material="GOAL_002-material" count="2">
-          <input semantic="VERTEX" source="#Plane-mesh-vertices" offset="0"/>
-          <input semantic="NORMAL" source="#Plane-mesh-normals" offset="1"/>
-          <input semantic="TEXCOORD" source="#Plane-mesh-map-0" offset="2" set="0"/>
-          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
-        </triangles>
-      </mesh>
-    </geometry>
   </library_geometries>
   <library_visual_scenes>
     <visual_scene id="Scene" name="Scene">
       <node id="Plane_001" name="Plane.001" type="NODE">
-        <matrix sid="transform">0.5 0 0 0.5500627 0 0.5 0 -0.02950838 0 0 1 1.445392 0 0 0 1</matrix>
+        <matrix sid="transform">0.5 0 0 0.4928677 0 0.5 0 0.4788165 0 0 1 0 0 0 0 1</matrix>
         <instance_geometry url="#Plane_002-mesh" name="Plane.001">
           <bind_material>
             <technique_common>
@@ -399,20 +295,8 @@
           </bind_material>
         </instance_geometry>
       </node>
-      <node id="Plane" name="Plane" type="NODE">
-        <matrix sid="transform">0.25 0 0 4.299262 0 0.25 0 0.2196169 0 0 1 1.447396 0 0 0 1</matrix>
-        <instance_geometry url="#Plane_001-mesh" name="Plane">
-          <bind_material>
-            <technique_common>
-              <instance_material symbol="goal-material" target="#goal-material">
-                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
-              </instance_material>
-            </technique_common>
-          </bind_material>
-        </instance_geometry>
-      </node>
       <node id="Cube" name="Cube" type="NODE">
-        <matrix sid="transform">2.5 0 0 0.04890609 0 2.5 0 -0.5306129 0 0 0.0875 1.452315 0 0 0 1</matrix>
+        <matrix sid="transform">2.5 0 0 0 0 2.5 0 0 0 0 0.0875 0 0 0 0 1</matrix>
         <instance_geometry url="#Cube-mesh" name="Cube">
           <bind_material>
             <technique_common>
@@ -431,6 +315,9 @@
             </technique_common>
           </bind_material>
         </instance_geometry>
+        <node id="title" name="title" type="NODE">
+          <matrix sid="transform">5.52069e-4 -0.05714151 0 0.8988598 0.0803178 3.92765e-4 0 -0.8937001 0 0 11.42857 1.291052 0 0 0 1</matrix>
+        </node>
       </node>
       <node id="Area" name="Area" type="NODE">
         <matrix sid="transform">1 0 0 -12.35573 0 1 0 28.85338 0 0 1 122.9384 0 0 0 1</matrix>
@@ -439,18 +326,6 @@
       <node id="Camera" name="Camera" type="NODE">
         <matrix sid="transform">-0.9996102 -0.01379063 0.02427655 -10.43898 0.02792011 -0.4937504 0.8691553 83.4846 3.59881e-7 0.8694943 0.4939429 55.55833 0 0 0 1</matrix>
         <instance_camera url="#Camera-camera"/>
-      </node>
-      <node id="GOAL" name="GOAL" type="NODE">
-        <matrix sid="transform">1.930631 0 0 15.45259 0 1.930631 0 15.8936 0 0 1.596102 4.41424 0 0 0 1</matrix>
-        <instance_geometry url="#Plane-mesh" name="GOAL">
-          <bind_material>
-            <technique_common>
-              <instance_material symbol="GOAL_002-material" target="#GOAL_002-material">
-                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
-              </instance_material>
-            </technique_common>
-          </bind_material>
-        </instance_geometry>
       </node>
     </visual_scene>
   </library_visual_scenes>
