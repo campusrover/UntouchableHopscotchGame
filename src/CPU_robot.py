@@ -30,6 +30,7 @@ rate = rospy.Rate(2)
 #------------------VARIABLES---------------------
 current = "black"
 location = [0,0]
+goal = [4,5]
 
 states = {0 : "starting",
             1 : "white",
@@ -42,10 +43,10 @@ direction = {"up" : 1,
             "left" : 4}
 
 gameboard8 = {  (2, 1, 1, 2, 2, 1, 1, 2), # 1.75  y values
-                (1, 2, 2, 1, 2, 1, , 2), # 1.25
+                (1, 2, 2, 1, 2, 1, 2, 2), # 1.25
                 (1, 2, 2, 1, 2, 2, 2, 1), # .75
                 (1, 2, 1, 1, 1, 1, 1, 2), # .25
-                (1, 1, 2, 2, 2, 1, 2, 1), # -.25
+                (1, 1, 2, 2, 3, 1, 2, 1), # -.25
                 (2, 1, 2, 1, 3, 1, 2, 1), # -.75
                 (1, 1, 1, 1, 2, 1, 1, 1), # -1.25
                 (0, 2, 1, 2, 1, 2, 1, 1)} # -1.75
@@ -58,16 +59,16 @@ gameboard8 = {  (2, 1, 1, 2, 2, 1, 1, 2), # 1.75  y values
 
 
     # def permission(way):
-    #     if (way == "up"):
+    #     if (way == "1"):
     #         if (gameboard([location[0] + 1][location[1]] == 2 or location[0] != 0)):
     #             return True
-    #     elif (way == "down"):
+    #     elif (way == "2"):
     #         if (gameboard([location[0] - 1][location[1]] == 2 or location[0] != 7)):
     #             return True
-    #     elif (way == "left")
+    #     elif (way == "4")
     #         if (gameboard([location[0]][location[1] - 1] == 2 or location[1] != 7)):
     #             return True
-    #     elif (way == "right"):
+    #     elif (way == "3"):
     #         if (gameboard([location[0]][location[1] + 1] == 2 or location[1] != 0)):
     #     else:
     #         return False
@@ -109,32 +110,6 @@ def up(): #moves into next box
     cpub.publish(t)
     location[0] += 1 # updating location
 
-def down():
-    # if (permission("down") is True):
-    x_old = x
-    while (yaw != 0):
-        t.angular.z = .3 # meters/sec  NOTE: TRY TO IMPLEMENT SOMETHING THAT CHECK WHICH WAY IT SHOULD GO
-        cpub.publish(t)
-    t.angular.z = 0
-    cpub.publish(t)
-    while (x != x_old + .50): # NOTE: THIS INCLUDES POSSIBLY GOING BACKWARDS INSTEAD
-        t.linear.x = .3
-        cpub.publish(t)
-    location[x] -= .45 # updating location
-
-def left():
-    # if (permission("left") is True):
-    y_old = y
-    while (yaw != -math.pi/2):
-        t.angular.z = .3 # meters/sec
-        cpub.publish(t)
-    t.angular.z = 0
-    cpub.publish(t)
-    while (y != y_old -.45):
-        t.linear.x = .3
-        cpub.publish(t)
-    location[x] -= .45
-
 def right():
     # if (permission("right") is True):
     y_old = y
@@ -147,6 +122,15 @@ def right():
         t.linear.x = .3
         cpub.publish(t)
     location[x] -= .45
+
+def algorithm():
+    if (goal[0]-location[0] >= goal[1]-location[1]):
+        if (permission(1)):
+            up()
+        elif (permission(right)):
+            right()
+        else:
+            cpu
 
 while not rospy.is_shutdown():
     location_old = location

@@ -13,13 +13,11 @@ from sensor_msgs.msg import LaserScan
 
 # it is not necessary to add more code here but it could be useful
 def key_cb(msg):
-   global state; global last_key_press_time
+   global state
    state = msg.data
-   last_key_press_time = rospy.Time.now()
 
-# odom is also not necessary but very useful
-def odom_cb(msg):
-   return
+
+
 
 # init node
 rospy.init_node('dancer')
@@ -29,7 +27,8 @@ rospy.init_node('dancer')
 
 # RUN rosrun prrexamples key_publisher.py to get /keys
 key_sub = rospy.Subscriber('keys', String, key_cb)
-odom_sub = rospy.Subscriber('odom', Odometry, odom_cb)
+color_sub = rospy.Subscriber ('/colormode', String, color_pub)
+report_sub = rospy.Publisher()
 cmd_vel_pub = rospy.Publisher('cmd_vel', Twist, queue_size=10)
 
 # start in state halted and grab the current time
