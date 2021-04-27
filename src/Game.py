@@ -28,3 +28,4 @@ def user_odom_cb(msg):
     usr_y = msg.data.pose.pose.position.y
 
 while (!rospy.is_shutdown):
+    #text updated
