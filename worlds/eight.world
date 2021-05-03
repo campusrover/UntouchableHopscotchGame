@@ -8,7 +8,7 @@
       <uri>model://sun</uri>
     </include>
     <model name="eight">
-      <pose>0 0 0.0875  0 0 0</pose>
+      <pose>0 0 0  0 0 0</pose>
       <static>true</static>
       <link name="body">
         <visual name="visual">

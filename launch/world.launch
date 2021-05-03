@@ -16,9 +16,9 @@
     </include>
 
 <!-- start gui -->
-    <node name="gazebo_gui" pkg="gazebo" type="gui" respawn="false" output="screen"/> 
+    <node name="something" pkg="gazebo" type="gui" respawn="false" output="screen"/> 
 
   <!-- include our robots -->
-    <include file="$(find untouchablehopscotch)/launch/robots.launch"/>
+    <include file="$(find aldopkg)/UntouchableHopscotch/launch/robots.launch"/>
 
 </launch>
