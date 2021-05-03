@@ -12,7 +12,7 @@
       <link name="body">
         <visual name="visual">
           <geometry>
-            <mesh><uri>file://8x8.dae</uri></mesh>
+            <mesh><uri>file://eightmodel.dae</uri></mesh>
           </geometry>
         </visual>
       </link>
