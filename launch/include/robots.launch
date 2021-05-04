@@ -1,0 +1,24 @@
+<launch>
+  <!-- No namespace here as we will share this description. 
+       Access with slash at the beginning -->
+    <param name="robot_description"
+    command="$(find xacro)/xacro.py $(find turtlebot3_description)/urdf/turtlebot3_waffle.urdf.xacro" />
+    
+  <!-- BEGIN CPU ROBOT -->
+  <group ns="usr">
+    <param name="tf_prefix" value="usr_tf" />
+    <include file="$(find aldopkg)/UntouchableHopscotch/launch/include/one_robot.launch" >
+      <arg name="init_pose" value="-x 1 -y 1 -z 0" />
+      <arg name="robot_name"  value="Robot1" />
+    </include>
+  </group>
+
+  <!-- BEGIN USER ROBOT -->
+  <group ns="cpu">
+    <param name="tf_prefix" value="cpu_tf" />
+    <include file="$(find aldopkg)/UntouchableHopscotch/launch/include/one_robot.launch" >
+      <arg name="init_pose" value="-x -2 -y 1 -z 0" />
+      <arg name="robot_name" value="Robot2" />
+    </include>
+  </group>
+</launch>

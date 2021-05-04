@@ -61,16 +61,18 @@
       <direction>-0.5 0.1 -0.9</direction>
     </light>
     <model name='eight'>
-      <pose frame=''>0 0 0 0 -0 0</pose>
+      <pose frame=''>0 0 -0.075 0 -0 0</pose>
       <static>1</static>
       <link name='body'>
+      <collision name = 'collision'>
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>file://eightmodel.dae</uri>
+              <uri>file://eight/meshes/eightmodel.dae</uri>
             </mesh>
           </geometry>
         </visual>
+      </collision>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
@@ -113,6 +115,7 @@
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
+        
         </link>
       </model>
       <model name='ground_plane'>
