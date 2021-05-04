@@ -1,19 +1,38 @@
-## Welcome to GitHub Pages
+## Project Report
+# UntouchableHopscotch
+### by Al Colon
 
-You can use the [editor on GitHub](https://github.com/alcolon/UntouchableHopscotch/edit/main/docs/ProjectReport.md) to maintain and preview the content for your website in Markdown files.
+## Introduction
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Original Proposal
 
-### Markdown
+Originally based off of the Don't Touch the White Tile game that was popular in the early 2010s, UntouchableHopscotch was originally going to incorporate changing tiles in a 3x3, 4x4, and 8x8 gameboard. It was up to the computer to figure out how to get to it's goal tile through OpenCV, restricted by its designated color. While it would have been cool to get the tiles to change colors. I was afraid that figuring out how to get the tiles to shift would take too much time. I also wanted to incorporate a teleop robot that would let the user race against the robot. This would make the game more immersive and playable. Both player would essentially have four movement options
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### My Answer/Where it ended up
 
-```markdown
-Syntax highlighted code block
+The general idea has stayed the same but there have been a lot of under the hood tweaks. While I did not have the changing color tiles, I implemented a timed color change which essentially did the same thing. By introducing a game node that is responsible for reporting what color each robot can and cannot use. This leaves more computing space for each robot, especially for the CPU robot.
 
-# Header 1
-## Header 2
-### Header 3
+#### CPU
+The CPU robot is the most involved part of my project coding-wise. This robot starts off knowing its (x,y) location, the (x,y) location of the goal piece and what color it can use. It starts off with black but it will change as the game node sees fit.
+Originally, it would have been able to go black and to the left. However, I realized that it made more sense to consider that the robot would be better off just waiting for the colors to change if it got stuck. This greatly streamlined the algorithm as it only had three decision to make.
+
+What I have now is an autonomous robot that can 
+
+
+## Relevant Literature
+
+## What was Created
+### What is UntouchableHopscotch
+### How to play
+### Process of creating the game
+### Problems along the Way
+### Solutions and Pivots
+
+## Reflection
+### Working with Harris and Jacqueline
+### Leaving to Work Solo
+### Working by Myself
+
 
 - Bulleted
 - List
@@ -25,13 +44,3 @@ Syntax highlighted code block
 
 [Link](url) and ![Image](src)
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/alcolon/UntouchableHopscotch/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
