@@ -8,6 +8,6 @@
     <arg name="recording" value="false"/>
     <arg name="debug" value="false"/>
   </include>
-  <!--<include file="$(find aldopkg)UntouchableHopscotch/launch/include/robots.launch"/> -->
+  <include file="$(find aldopkg)UntouchableHopscotch/launch/include/robots.launch"/>
 
 </launch>
