@@ -9,16 +9,16 @@
     <param name="tf_prefix" value="cpu_tf" />
     <include file="$(find aldopkg)/UntouchableHopscotch/launch/include/one_robot.launch" >
       <arg name="init_pose" value="-x -1.81 -y 1.5 -z 0.01 -Y -1.57" />
-      <arg name="robot_name"  value="usr" />
+      <arg name="robot_name"  value="cpu" />
     </include>
   </group>
 
   <!-- BEGIN USER ROBOT -->
   <group ns="user">
-    <param name="tf_prefix" value="cpu_tf" />
+    <param name="tf_prefix" value="usr_tf" />
     <include file="$(find aldopkg)/UntouchableHopscotch/launch/include/one_robot.launch" >
       <arg name="init_pose" value="-x -1.5 -y 1.81 -z 0.01 -Y 0" />
-      <arg name="robot_name" value="cpu" />
+      <arg name="robot_name" value="usr" />
     </include>
   </group>
 </launch>

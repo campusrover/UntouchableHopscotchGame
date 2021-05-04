@@ -19,9 +19,9 @@ def odom_cb(msg):
 
 
 rospy.init_node('cpu')
-cpub = rospy.Publisher('cmd_vel', Twist, queue_size=1)
+cpub = rospy.Publisher('/cpu/cmd_vel', Twist, queue_size=1)
 t = Twist()
-cpsub = rospy.Subscriber('/odom', Odometry, odom_cb)
+cpsub = rospy.Subscriber('cpu/odom', Odometry, odom_cb)
 rate = rospy.Rate(2)
 
 
@@ -38,7 +38,7 @@ states = {  0 : "starting",
             3 : "goal"}
 
 direction = {"up" : 1,
-            "right" : 2,
+            "right" : 2}
 
 
 gameboard8 = {  (2, 1, 1, 2, 2, 1, 1, 2), # 1.75  y values
@@ -73,7 +73,7 @@ y = 0
 roll = pitch = yaw = 0
 target_angle = 90
 distance_to_drive = .5 #meters
-kP = 0.5
+kP = .5
 
 #-----------buffer------------ waiting for odom
 
@@ -92,17 +92,17 @@ def up(): #moves into next box
     target_angle = 0
     x_old = x
     target_rad = target_angle * math.pi/180
-    while(yaw != target_rad):
+    while(yaw != 0):
         t.angular.z = kP  * (target_rad - yaw)
         cpub.publish(t)
-    t.angular.z = 0
+    t.linear.x = .6
     cpub.publish(t)
-    while (x - x_old <= distance_to_drive):
-        t.linear.x = .3
-        cpub.publish(t)
-    t.linear.x =  0
-    cpub.publish(t)
-    location[0] += 1 # updating location
+    # while (x - x_old <= distance_to_drive):
+    #     t.linear.x = .3
+    #     cpub.publish(t)
+    # t.linear.x =  0
+    # cpub.publish(t)
+    # location[0] += 1 # updating location
 
 def right():
     target_angle = 90
@@ -120,6 +120,11 @@ def right():
     cpub.publish(t)
     location[0] += 1 # updating location
 
+def stop():
+    t.angular.z = 0
+    t.linear.x = 0
+    cpub.publish(t)
+
 def algorithm():
     if (goal[0]-location[0] >= goal[1]-location[1]):
         if (permission(1)):
@@ -127,14 +132,17 @@ def algorithm():
         elif (permission(2)):
             right()
         else:
+            stop()
 
 
 while not rospy.is_shutdown():
-    location_old = location
+    print("whatido")
+    # t.linear.x =.2
+    # cpub.publish(t)
     up()
-    print("going up to location x,y: " + str(location))
-    t.linear.x = 0
-    cpub.publish(t)
+    # stop()
+    # print("star")
+    # right()
     rate.sleep()
 
     # down()
