@@ -1,12 +1,12 @@
 
-<!--PROJECT LOGO
+<!--PROJECT LOGO #will add later
 <br />
 <p align="center">
   <a href="https://github.com/alcolon/UntouchableHopscotchGame">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a> -->
 
-  <h3 align="center">Untouchable Hopscotch</h3>
+  <h3 align="center">Untouchable Hopscotch by Al Colon</h3>
 
   <p align="center">
     A game brimming with anticipation, fear and excitement. Race against a CPU as you try to reach the treasure at the end of a long, grueling, and logic-defining journey. Can you beat Master CPU?
