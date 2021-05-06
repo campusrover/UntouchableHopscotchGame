@@ -103,5 +103,6 @@ To my own fault, I had to relearn a lot of the basics because the application of
 ## Links
 [Lab Notebook Submission](https://campus-rover.gitbook.io/lab-notebook/faq/diy-gazebo-world)
 [README.md](https://github.com/alcolon/UntouchableHopscotch#readme)
+[Video Demo](https://www.youtube.com/watch?v=z-Am2FzwE4)
 
 ```
