@@ -2,7 +2,7 @@
 <!--PROJECT LOGO #will add later
 <br />
 <p align="center">
-  <a href="https://github.com/alcolon/UntouchableHopscotchGame">
+  <a href="https://github.com/campusrover/UntouchableHopscotchGame">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a> -->
 
@@ -11,14 +11,14 @@
   <p align="center">
     A game brimming with anticipation, fear and excitement. Race against a CPU as you try to reach the treasure at the end of a long, grueling, and logic-defining journey. Can you beat Master CPU?
     <br />
-    <a href="https://campusrover.github.io"><strong>GitPages »</strong></a>
+    <a href="https://campusrover.github.io/UntouchableHopscotchGame"><strong>GitPages »</strong></a>
     <br />
     <br />
     <a href="https://youtu.be/6-SiT4fElZY">View Demo</a>
     ·
-    <a href="https://github.com/alcolon/UntouchableHopscotchGame/issues">Report Bug</a>
+    <a href="https://github.com/campusrover/UntouchableHopscotchGame/issues">Report Bug</a>
     ·
-    <a href="https://github.com/alcolon/UntouchableHopscotchGame/issues">Request Feature</a>
+    <a href="https://github.com/campusrover/UntouchableHopscotchGame/issues">Request Feature</a>
   </p>
 </p>
 
@@ -80,7 +80,7 @@ You will need ROS, Gazebo and Python8
 
 1. Clone the repo inside catkin_ws you can use aldopkg or your own package
    ```sh
-   git clone https://github.com/alcolon/UntouchableHopscotchGame.git
+   git clone https://github.com/campusrover/UntouchableHopscotchGame.git
    ```
 
 ### Create new gameboards!
