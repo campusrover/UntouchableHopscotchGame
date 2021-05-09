@@ -127,4 +127,4 @@ Thank you 2021 Autonomous Robotics for such a fun and rewards class! Special tha
 
 Al Colon - alexaleighcolon@gmail.com
 
-Project Link: [https://github.com/alcolon/UntouchableHopscotchGame](https://github.com/alcolon/UntouchableHopscotchGame)
+Project Link: [https://github.com/campusrover/UntouchableHopscotchGame](https://github.com/alcolon/UntouchableHopscotchGame)
