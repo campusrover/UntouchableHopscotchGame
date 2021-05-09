@@ -14,7 +14,7 @@
     <a href="https://campusrover.github.io"><strong>GitPages »</strong></a>
     <br />
     <br />
-    <a href="https://www.youtube.com/watch?v=z-Am2zwE4">View Demo</a>
+    <a href="https://youtu.be/6-SiT4fElZY">View Demo</a>
     ·
     <a href="https://github.com/alcolon/UntouchableHopscotchGame/issues">Report Bug</a>
     ·
@@ -112,7 +112,6 @@ Follow the instructions in the terminal and have fun!
 
 [Refer here for instruction on creating your own gameboard](https://campus-rover.gitbook.io/lab-notebook/faq/diy-gazebo-world)
 
-[WIP: How to ]()
 
 <!-- LICENSE -->
 ## License
