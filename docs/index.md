@@ -102,7 +102,7 @@ To say that creating this game was a huge challenge is an under statement. While
 To my own fault, I had to relearn a lot of the basics because the application of them in my project required deeper understanding. Assumptions I had made about  ROS, lead to many moments of frustration. The solutions had seemed simple, however, as with life, that is rarely the case. Even though what I created wasn't too complicated, it took me forever to go through the trials and errors to get to where I am now. There was much that I learned in class and it only occured to me that most of what I accomplished was strictly self taught. There was no template for me to follow and it was up to me and me alone to understand what all this code meant. It was up to me to understand the specifics the programming. It was up to me to figure what I did wrong when the code refused to work. I felt guilty for how simple my assignment was but I felt like my own personal growth was huge. I came into this class not understanding a single word of Python or ROS but I still manage to get something working. From scratch, I was able to incorporate 3D modeling, ROS, Open CV all together to create a functional game.
 ## Links
 [Lab Notebook Submission](https://campus-rover.gitbook.io/lab-notebook/faq/diy-gazebo-world)
-[README.md](https://github.com/alcolon/UntouchableHopscotch#readme)
+[README.md](https://github.com/campusrover/UntouchableHopscotch#readme)
 [Video Demo](https://www.youtube.com/watch?v=z-Am2FzwE4)
 
 ```
