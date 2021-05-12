@@ -14,7 +14,7 @@
     <a href="https://campusrover.github.io/UntouchableHopscotchGame"><strong>GitPages »</strong></a>
     <br />
     <br />
-    <a href="https://youtu.be/6-SiT4fElZY">View Demo</a>
+    <a href="https://youtu.be/y7NVff_QhPw">View Demo</a>
     ·
     <a href="https://github.com/campusrover/UntouchableHopscotchGame/issues">Report Bug</a>
     ·
