@@ -56,11 +56,6 @@ Stats and Info provided by the game include:
 - Color mode
 - Color switch
 
-*Offered After*
-- Games played
-- How many games won by user
-- How many games won by cpu
-
 Depending on the point of the game, different information will available to the user to help make it immersive.
 
 ### Process of creating the game
@@ -74,8 +69,6 @@ Nothing in this project made me wish I had a partner more than this aspect of th
 
 **Getting the robots to interact**
 The robots may not have interacted physically but it did require some communication in order to get the robots to get some sense of place. To be honest, this was the most fun part of the project. I wanted to have a good user interface so that play was fairly intuitive. Granted, it is still limited to the terminal but it was fun to figure out how subscriber nodes could work to keep the bots and the user informed. I tried to create my own msgs but that just gave me more problems than I was ready to handle. The instructions I found for that both from the book and online did not work for me and learning from previous experiences with the 3d model import, if I am doing everything right and it is still not working, move right along. Another solution is probably right around the corner.
-
-
 
 ### Problems along the Way
 To speak more specifically about the problems that I experienced, I think that because of the way I work and problem solve in general, I definitely could have benefitted from a new set of eyes when I encountered a new problem. As I mentioned before getting the model into the virtual space was the hardest and most time consuming aspect of my project. It got to the point that maybe I could instead simply try having an invisible board. One that the was communicated to the user and the cpu as a list. That solution was quickly abandoned as it would just be confusing and the user would be have no idea what was going on. Fortunately I got it work and was finally about to tune the board to work best.
@@ -99,10 +92,10 @@ Since we did not have a lot of time to work together on the project, my reflecti
 ### Working by Myself
 To say that creating this game was a huge challenge is an under statement. While I had the help of Arjun, I still felt lost for most of the assignment. While my plan was relatively easy, the lack of guidance outside of myself lead me to running into circles for most of the development. The concept was simple and I knew that steps to get to the finish-line was in my arsenal. I knew that there were definitely details that I needed to iron out but unfortunately, I underestimated how wrinkly my project was.
 
-To my own fault, I had to relearn a lot of the basics because the application of them in my project required deeper understanding. Assumptions I had made about  ROS, lead to many moments of frustration. The solutions had seemed simple, however, as with life, that is rarely the case. Even though what I created wasn't too complicated, it took me forevesr to go through the trials and errors to get to where I am now. There was much that I learned in class and it only occured to me that most of what I accomplished was strictly self taught. There was no template for me to follow and it was up to me and me alone to understand what all this code meant. It was up to me to understand the specifics the programming. It was up to me to figure what I did wrong when the code refused to work. I felt guilty for how simple my assignment was but I felt like my own personal growth was huge. I came into this class not understanding a single word of Python or ROS but I still manage to get something working. From scratch, I was able to incorporate 3D modeling, ROS, Open CV all together to create a functional game.
+To my own fault, I had to relearn a lot of the basics because the application of them in my project required deeper understanding. Assumptions I had made about  ROS, lead to many moments of frustration. The solutions had seemed simple, however, as with life, that is rarely the case. Even though what I created wasn't too complicated, it took me forever to go through the trials and errors to get to where I am now. There was much that I learned in class and it only occurred to me that most of what I accomplished was strictly self taught. There was no template for me to follow and it was up to me and me alone to understand what all this code meant. It was up to me to understand the specifics the programming. It was up to me to figure what I did wrong when the code refused to work. I felt guilty for how simple my assignment was but I felt like my own personal growth was huge. I came into this class not understanding a single word of Python or ROS but I still manage to get something working. From scratch, I was able to incorporate 3D modeling, ROS, Open CV all together to create a functional game.
 ## Links
 [Lab Notebook Submission](https://campus-rover.gitbook.io/lab-notebook/faq/diy-gazebo-world)
 [README.md](https://github.com/campusrover/UntouchableHopscotch#readme)
-[Video Demo]()
+[Video Demo](https://youtu.be/y7NVff_QhPw)
 
 ```
